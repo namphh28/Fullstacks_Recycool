@@ -34,7 +34,7 @@ export default function ScanImage() {
         formData.append("file", imageFile);
 
         // Gọi API với POST và FormData
-        const response = await fetch("http://127.0.0.1:8000/det", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}`, {
           method: "POST",
           body: formData,
           headers: {
